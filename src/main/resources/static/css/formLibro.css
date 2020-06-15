@@ -1,0 +1,9 @@
+body {
+	background: url(../img/libro.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.formulario {
+	position: relative;
+	right: 300px;
+}

@@ -38,9 +38,8 @@ public class LibroService implements ILibroService{
 	}
 
 	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+	public void delete(int isbn) {
+		data.deleteById(isbn);
 	}
 
 }

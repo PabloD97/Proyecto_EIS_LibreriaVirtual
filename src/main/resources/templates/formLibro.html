@@ -4,11 +4,12 @@
 <meta charset="ISO-8859-1">
 <title>Agregar Libro</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/css/formLibro.css" th:href="@{../css/formLibro.css}">
 </head>
 <body>
 	<div class ="container mt-4">
 		<div class = "col-sm-6">
-			<form th:action="@{/save}" th:object=${libro} method="POST">
+			<form class="formulario" th:action="@{/save}" th:object=${libro} method="POST">
 				<div class="card">
 					<div class="card-header">
 					<h2>Nuevo Libro</h2>
