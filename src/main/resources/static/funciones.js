@@ -1,7 +1,7 @@
 function eliminar(isbn) {
 	swal({
-		  title: "Estas seguro de eliminar el libro?",
-		  text: "Una vez eliminado, no podras recuperarlo!",
+		  title: "¿Estas seguro de eliminar el libro?",
+		  text: "¡Una vez eliminado, no podras recuperarlo!",
 		  icon: "warning",
 		  buttons: true,
 		  dangerMode: true,
@@ -14,7 +14,7 @@ function eliminar(isbn) {
 					  console.log(res);
 				  },
 			  });
-		    swal("Puf! El libro fue eliminado!", {
+		    swal("¡Puf! ¡El libro fue eliminado!", {
 		      icon: "success",
 		    }).then((ok) => {
 		    	if(ok){
@@ -22,7 +22,7 @@ function eliminar(isbn) {
 		    	}
 		    });
 		  } else {
-		    swal("No se elimino el libro!");
+		    swal("¡No se eliminó el libro!");
 		  }
 		});
 }
