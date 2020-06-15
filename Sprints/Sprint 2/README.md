@@ -39,3 +39,10 @@ Para saber como nos esta yendo en las sprints
 - Prioridad : Normal
 - Estimado: 3
 - Estado: Finalizada
+
+## RETROSPECTIVA 17-6-2020 Fin de Sprint 2
+
+Se llegó a realizar a tiempo la demo que teniamos planeado mostrar.
+
+Llegamos a completar todo el sprint backlog, hasta las us que quedaron incompletas del anterior sprint.
+
