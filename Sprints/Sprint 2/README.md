@@ -21,7 +21,7 @@ Para que este deje de aparecer en pantalla
 
 - Prioridad : Alta
 - Estimado: 5
-- Estado: En proceso
+- Estado: Finalizada
 
 
 
@@ -46,7 +46,7 @@ Quiero implementar integración continua
 - Estimado: 5
 - Estado: En proceso
 
-## 5- Crear un grafico de velocidad
+## 5- Crear un cuadro de velocidad
 
 Como programador 
 Quiero tener un cuadro de velocidad
