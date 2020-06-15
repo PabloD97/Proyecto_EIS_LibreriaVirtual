@@ -44,7 +44,7 @@ Quiero implementar integración continua
 
 - Prioridad : Normal
 - Estimado: 5
-- Estado: En proceso
+- Estado: Finalizado
 
 ## 5- Crear un cuadro de velocidad
 
