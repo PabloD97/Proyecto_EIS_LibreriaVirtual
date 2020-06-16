@@ -23,8 +23,11 @@ public class LibroService implements ILibroService{
 
 	@Override
 	public Optional<Libro> listarPorId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Libro> libro = data.findById(id) ;
+		if ( libro.isPresent() ) {
+			return libro ;
+		}
+		return null ;
 	}
 
 	@Override

@@ -47,11 +47,26 @@ public class ControladorTest {
 	 
 	    // when
 	    
-		Libro libroGuardado = libroService.save(libro1);
+		libroService.save(libro1);
 	    List<Libro> listaDeLibro = (List<Libro>) libroService.findAll();
 	    
 	    // then
-	    assertTrue( listaDeLibro.contains(libroGuardado) );
+	    assertTrue( listaDeLibro.contains(libro1) );
+	}
+	
+	
+	@Test
+	public void comoAdministradorDeseoBorrarUnLibroPorSuISBN() {
+		//given
+		Libro libroNew = new Libro(1,"libroPrueba","libroAutor",3,"librazo",4) ;
+		
+		//when
+		Libro libroGuardado = libroService.save(libroNew) ;
+		List<Libro> listaDeLibro = (List<Libro>) libroService.findAll();
+		libroService.deleteById(libroGuardado.getIsbn());
+		
+		// then
+		assertFalse(listaDeLibro.contains(libroNew)) ;
 	}
 }
 
