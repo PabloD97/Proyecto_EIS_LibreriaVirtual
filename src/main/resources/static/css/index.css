@@ -1,6 +1,8 @@
 body {
-	background: url(../img/libros3.png) no-repeat center center fixed;
+	background: url(../img/libros3.png) no-repeat center;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 table, th, td {
@@ -10,8 +12,8 @@ table, th, td {
 
 .agregar {
 	position: relative;
-	text-align: left;
-	top: 43px;
+	left: 1000px;
+	top: 93px;	
 }
 
 .titulo {
@@ -21,5 +23,26 @@ table, th, td {
 
 .buscar{
 	position: relative;
-	right: 300px;
+	top: 50px;
+	max-width: 400px;
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
 }
+
+.boton {
+	background-color: #4CAF50;
+  	border: none;
+  	color: white;
+  	padding: 7px 15px;
+  	border-radius: 5px;
+}
+
+/*Esto es para la barrita blanca de la busqueda*/
+::placeholder {
+  	color: #494949;
+  	opacity: 1;
+  	background-color: white;
+}
+
+

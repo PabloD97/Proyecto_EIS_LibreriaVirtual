@@ -27,3 +27,7 @@ function eliminar(isbn) {
 		});
 }
 
+
+function volverAtras() {
+	window.location = '/';
+}
