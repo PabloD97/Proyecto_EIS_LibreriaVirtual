@@ -10,9 +10,19 @@
 	<div class="container mt-4">
 						
 	<br>
-		<div class = "agregar"> 
+		<div > 
 			<a th:href="@{/new}" class="btn btn-primary" > Agregar</a>
 		</div> 
+
+	<div class = "agregar">
+		<form th:action="@{/}">
+			<input type="text" name="keyword" th:value="${keyword}" required />
+			&nbsp;
+			<input type="submit" value="Buscar" />
+			&nbsp;
+			<input type="button" value="Volver" th:onclick="volverAtras()" />
+		</form>
+	</div>
 
 	<h2 th:if="${libros.isEmpty()}" class = "titulo">No hay libros disponibles</h2>	
 	<div th:if="${!libros.isEmpty()}" class="panel-heading">
@@ -50,5 +60,10 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="funciones.js"></script>
+	<script type="text/javascript">
+		function volverAtras() {
+			window.location = '/';
+		}
+	</script>
 </body>
 </html>

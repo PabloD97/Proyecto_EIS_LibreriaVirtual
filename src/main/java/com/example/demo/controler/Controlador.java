@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,11 +24,19 @@ public class Controlador {
 	
 	@Autowired
 	private ILibroService service;
-	
+	/*
 	@GetMapping("/")
 	public String listar(Model model) {
 		List<Libro>libros=service.listarTodos();
 		model.addAttribute("libros", libros);
+		return "index";
+	}*/
+	// Modifique el listar para que ahora tambien haga de filter
+	@GetMapping("/")
+	public String listar(Model model, @Param("keyword") String keyword ) {
+		List<Libro>libros=service.listarTodos(keyword);
+		model.addAttribute("libros", libros);
+		model.addAttribute("keyword", keyword);
 		return "index";
 	}
 	
