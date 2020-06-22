@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +42,30 @@ public class LibroService implements ILibroService{
 		}
 		return null ;
 	}
+	
+	
+	@Override
+	public List<Libro> listarPorTitulo(String titulo) {
+		List<Libro> librosMismoTitulo = data.findByTitulo(titulo) ;
+		return librosMismoTitulo ;
+	}
+	
+	
+	
+	@Override
+	public List<Libro> listarPorGenero(String genero) {
+		List<Libro> librosMismoTitulo = data.findByGenero(genero) ;
+		return librosMismoTitulo ;
+	}
+	
+	
+	@Override
+	public List<Libro> listarPorAutor(String autor) {
+		List<Libro> librosMismoAutor = data.findByAutor(autor) ;
+		return librosMismoAutor ;
+	}
+
+	
 
 	@Override
 	public int save(Libro libro) {
@@ -57,6 +82,5 @@ public class LibroService implements ILibroService{
 		data.deleteById(isbn);
 	}
 
-	
 	
 }

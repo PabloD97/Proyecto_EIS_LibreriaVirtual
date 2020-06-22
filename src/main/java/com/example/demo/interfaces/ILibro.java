@@ -2,6 +2,7 @@ package com.example.demo.interfaces;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -14,5 +15,10 @@ public interface ILibro extends CrudRepository<Libro,Integer> {
 	//codigo nuevo: para la us de busquedad
 	@Query("SELECT l FROM Libro l WHERE " + "CONCAT(l.isbn, l.titulo, l.autor, l.edicion, l.genero)" + " LIKE %?1%")
 	public List<Libro> findAll(String keyword);
+	
+	public List<Libro> findByTitulo(String titulo) ;
+	
+	public List<Libro> findByGenero(String genero) ;
 
+	public List<Libro> findByAutor(String autor) ;
 }

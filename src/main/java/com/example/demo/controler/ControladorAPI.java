@@ -35,6 +35,42 @@ public class ControladorAPI {
 		return ResponseEntity.ok(libros);
 	}
 	
+	// localhost:8090/libros/{id}  (GET) == DEVUELVE EL LIBRO CON ESE ID
+	@RequestMapping(value="/{id}")
+	public ResponseEntity<Libro> getLibroPorId(@PathVariable("id") Integer id) {
+		Optional<Libro> libro = service.listarPorId(id) ;
+		if(libro.isPresent()) {
+			return ResponseEntity.ok(libro.get()) ;
+		}else {
+			return ResponseEntity.noContent().build() ;
+		}
+	}
+	
+	// localhost:8090/libros/titulo={titulo}  (GET) == DEVUELVE LOS LIBROS CON ESE TITULO
+	@RequestMapping(value="/titulo={titulo}")
+	public ResponseEntity<List<Libro>> getLibroPorTitulo(@PathVariable("titulo") String titulo) {
+		List<Libro> librosMismoTitulo = service.listarPorTitulo(titulo) ;
+		return ResponseEntity.ok(librosMismoTitulo) ;
+	}
+	
+	
+	// localhost:8090/libros/genero={genero}  (GET) == DEVUELVE LOS LIBROS CON ESE GENERO
+	@RequestMapping(value="/genero={genero}")
+	public ResponseEntity<List<Libro>> getLibroPorGenero(@PathVariable("genero") String genero) {
+		List<Libro> librosMismoGenero = service.listarPorGenero(genero) ;
+		return ResponseEntity.ok(librosMismoGenero) ;
+	}
+	
+	
+	// localhost:8090/libros/autor={autor}  (GET) == DEVUELVE LOS LIBROS DE ESE AUTOR
+	@RequestMapping(value="/autor={autor}")
+	public ResponseEntity<List<Libro>> getLibroPorAutor(@PathVariable("autor") String autor) {
+		List<Libro> librosMismoAutor = service.listarPorAutor(autor) ;
+		return ResponseEntity.ok(librosMismoAutor) ;
+	}
+	
+	
+	
 	// localhost:8090/libros (POST) == SE AGREGA UN LIBRO CON LOS DATOS QUE UNO QUIERA
 	@PostMapping
 	public ResponseEntity<Integer> addLibro(@RequestBody Libro libro) {
