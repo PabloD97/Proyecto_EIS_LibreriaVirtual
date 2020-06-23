@@ -1,6 +1,7 @@
 package com.example.demo.controler;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -58,6 +59,11 @@ public class Controlador {
 		return "redirect:/";
 	}
 	
-	
-	
+	@GetMapping("/editar/{isbn}")
+	public String editar(Model model, @PathVariable int isbn) {
+		Optional<Libro> libro = service.listarPorId(isbn); 
+		 model.addAttribute("libro", libro);
+		return "editarLibro";
+		
+	}
 }

@@ -29,7 +29,6 @@ public class ControladorTest {
 		Libro libro3 = new Libro(3, "libro3", "libron", 0, "librito", 0);
 		  
 	    // when
-	    
 		libroService.save(libro1);
 		libroService.save(libro2);
 		libroService.save(libro3);
@@ -46,7 +45,6 @@ public class ControladorTest {
 		Libro libro1 = new Libro(0, "libro1", "libron", 0, "librito", 0);
 	 
 	    // when
-	    
 		libroService.save(libro1);
 	    List<Libro> listaDeLibro = (List<Libro>) libroService.findAll();
 	    
@@ -58,15 +56,29 @@ public class ControladorTest {
 	@Test
 	public void comoAdministradorDeseoBorrarUnLibroPorSuISBN() {
 		//given
-		Libro libroNew = new Libro(1,"libroPrueba","libroAutor",3,"librazo",4) ;
+		Libro libroNew = new Libro(1,"libroPrueba","libroAutor",3,"librazo",4);
 		
 		//when
-		Libro libroGuardado = libroService.save(libroNew) ;
+		Libro libroGuardado = libroService.save(libroNew);
 		List<Libro> listaDeLibro = (List<Libro>) libroService.findAll();
 		libroService.deleteById(libroGuardado.getIsbn());
 		
 		// then
-		assertFalse(listaDeLibro.contains(libroNew)) ;
+		assertFalse(listaDeLibro.contains(libroNew));
 	}
+	
+	@Test
+	public void comoAdministradorDeseoEditarUnLibro() {
+	    // given
+		Libro libro = new Libro(0, "libro1", "libron", 0, "librito", 0);
+	 
+	    // when
+		libroService.save(libro);
+	    libro.setAutor("Martin");
+	    
+	    // then
+	    assertTrue( libroService.findByAutor("Martin").size() == 1 );
+	}
+	
 }
 

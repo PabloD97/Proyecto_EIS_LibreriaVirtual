@@ -33,7 +33,7 @@ public class LibroService implements ILibroService{
 		return (List<Libro>)data.findAll();
 	}
 	
-	
+		
 	@Override
 	public Optional<Libro> listarPorId(int id) {
 		Optional<Libro> libro = data.findById(id) ;
@@ -81,6 +81,4 @@ public class LibroService implements ILibroService{
 	public void delete(int isbn) {
 		data.deleteById(isbn);
 	}
-
-	
 }

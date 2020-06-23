@@ -14,5 +14,4 @@ public interface ILibroService {
 	public Optional<Libro>listarPorId(int id);
 	public int save(Libro p);
 	public void delete(int id);
-	
 }
