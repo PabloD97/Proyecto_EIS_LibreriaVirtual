@@ -3,21 +3,21 @@
 ## 9- Poder visualizar los libros en paginas
 
 Como administrador
-Quiero poder ver la lista de libros en paginas
-Para poder  no tener que estar scroleando
+quiero poder ver la lista de libros en paginas
+para poder  no tener que estar scroleando
 
-- Prioridad : Normal
-- Estimado: 8
-- Estado: En Proceso
+- **Prioridad:** Normal
+- **Estimado:** 8
+- **Estado:** En Proceso
 
 ## 10- Spike login 
  
 Como desarrollador 
-Quiero  realizar un spike sobre login
-Para poder realizar   un login en el siguiente sprint
+quiero  realizar un spike sobre login
+para poder realizar   un login en el siguiente sprint
 
 
-- **Prioridad :** Alta
+- **Prioridad:** Alta
 - **Estimado:** 5
 - **Estado:** En Proceso
 
