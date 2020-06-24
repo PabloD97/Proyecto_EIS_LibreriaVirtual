@@ -39,6 +39,6 @@ Para que los cambios se vean reflejados en la pantalla
 
 - Prioridad: Alta
 - Estimado: 8
-- Estado: En Proceso
+- Estado: Finalizado
 
 ## RETROSPECTIVA 24-6-2020 Fin de Sprint 3
