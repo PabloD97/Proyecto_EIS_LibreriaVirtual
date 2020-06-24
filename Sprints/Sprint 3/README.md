@@ -42,3 +42,8 @@ Para que los cambios se vean reflejados en la pantalla
 - Estado: Finalizado
 
 ## RETROSPECTIVA 24-6-2020 Fin de Sprint 3
+
+Se llego a completar los US como teniamos planeado. No tuvimos ningun percanse durante el sprint.
+
+Las US de busquedad se lograron realizar de una manera rapida, por que logramos factorizar el codigo de las 3 US y hacerlo en uno.
+
