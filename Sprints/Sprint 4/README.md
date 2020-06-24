@@ -1,48 +1,13 @@
 # PLANIFICACION 24/06/2020 al 01/07/2020
 
-
-## 1- Poder buscar un libro por su titulo
-
-Como usuario
-Quiero poder buscar un libro por su titulo
-Para poder facilitar la búsqueda
-
-- Prioridad: Alta
-- Estimado: 8
-- Estado: Finalizado
-
-## 2- Poder buscar un libro por un genero
-
-Como usuario 
-Quiero poder buscar libros por géneros
-Para así poder verlos en pantalla
-
-- Prioridad: media
-- Estimado: 5
-- Estado: Finalizado
-
-## 3- Poder buscar un libro por su autor
-
-Como usuario
-Quiero poder buscar libros por autor
-Para así ver todos sus obras
-
-- Prioridad: media
-- Estimado: 5
-- Estado: Finalizado
-
-## 4- Poder modificar algun atributo de algun libro en especifico
+## Poder visualizar los libros en paginas
 
 Como administrador
-Quiero poder modificar algún valor del libro
-Para que los cambios se vean reflejados en la pantalla
+Quiero poder ver la lista de libros en paginas
+Para poder  no tener que estar scroleando
 
-- Prioridad: Alta
+- Prioridad : Normal
 - Estimado: 8
-- Estado: Finalizado
+- Estado: En Proceso
 
-## RETROSPECTIVA 24-6-2020 Fin de Sprint 3
-
-Se llego a completar los US como teniamos planeado. No tuvimos ningun percanse durante el sprint.
-
-Las US de busquedad se lograron realizar de una manera rapida, por que logramos factorizar el codigo de las 3 US y hacerlo en uno.
+## RETROSPECTIVA 01/07/2020 Fin de Sprint 4
