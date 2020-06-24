@@ -85,5 +85,25 @@ public class ControladorAPI {
 		service.delete(isbn);
 		return ResponseEntity.ok(null) ;
 	}
-}		
+	
+	
+	// localhost:8090/libros  (PUT) == CAMBIA EL ATRIBUTO DEL LIBRO QUE QUIERAS
+	@PutMapping
+	public ResponseEntity<Libro> updateLibro(@RequestBody Libro libro) {
+		Optional<Libro> optionalLibro = service.listarPorId(libro.getIsbn()) ;
+		if(optionalLibro.isPresent()) {
+			Libro updateLibro = optionalLibro.get() ;
+			updateLibro.setTitulo(libro.getTitulo());
+			updateLibro.setAutor(libro.getAutor());
+			updateLibro.setGenero(libro.getGenero());
+			updateLibro.setEdicion(libro.getEdicion());
+			updateLibro.setStock(libro.getStock());
+			service.save(updateLibro) ;
+			return ResponseEntity.ok(updateLibro) ;
+		}else {
+			return ResponseEntity.noContent().build() ;
+		}
+	}
+}
+		
 	

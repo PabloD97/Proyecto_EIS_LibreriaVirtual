@@ -21,4 +21,14 @@ para poder realizar   un login en el siguiente sprint
 - **Estimado:** 5
 - **Estado:** En Proceso
 
+## 11- Poder documentar la API REST
+
+Como desarrollador
+Quiero poder documentar la api
+para el uso de terceros
+
+- **Prioridad:** Normal
+- **Estimado:** 3
+- **Estado:** En Proceso
+
 ## RETROSPECTIVA 01/07/2020 Fin de Sprint 4
