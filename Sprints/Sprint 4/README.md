@@ -29,6 +29,6 @@ para el uso de terceros
 
 - **Prioridad:** Normal
 - **Estimado:** 3
-- **Estado:** En Proceso
+- **Estado:** Finalizado
 
 ## RETROSPECTIVA 01/07/2020 Fin de Sprint 4

@@ -20,6 +20,11 @@ import com.example.demo.modelo.Libro;
 @RestController
 @RequestMapping(value="/libros")
 public class ControladorAPI {
+
+	// API DOCUMENTADA CON SWAGGER
+	// 1- Correr la aplicacion
+	// 2 - http://localhost:8090/swagger-ui.html    == SWAGGER UI
+	//     http://localhost:8090/v2/api-docs        == JSON
 	
 	@Autowired
 	private ILibroService service ;
