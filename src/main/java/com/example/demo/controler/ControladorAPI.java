@@ -33,7 +33,7 @@ public class ControladorAPI {
 	// localhost:8090/libros (GET) == LISTADO DE LIBROS
 	@GetMapping
 	public ResponseEntity<List<Libro>> getLibros() {
-		List<Libro> libros = service.listarTodos(null) ; // agregue un null pa que no llore
+		List<Libro> libros = service.listarLibros(); // agregue un null pa que no llore
 		if (libros.isEmpty()) {
 			return ResponseEntity.noContent().build() ;
 		}

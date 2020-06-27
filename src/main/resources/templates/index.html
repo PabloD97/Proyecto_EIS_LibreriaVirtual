@@ -26,33 +26,46 @@
 	<h2 th:if="${libros.isEmpty()}" class = "titulo">No hay libros</h2>	
 	<div th:if="${!libros.isEmpty()}" class="panel-heading">
 		<h1 class = "titulo">Libros</h1>
-		<table class="table" >
-			<thead>
-				<tr>
-					<th>ISBN</th>
-					<th>TITULO</th>
-					<th>AUTOR</th>
-					<th>EDICION</th>
-					<th>GENERO</th>
-					<th>STOCK</th>
-					<th>ACCIONES</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="libro:${libros}">
-					<td th:text="${libro.isbn}"></td>
-					<td th:text="${libro.titulo}"></td>
-					<td th:text="${libro.autor}"></td>
-					<td th:text="${libro.edicion}"></td>
-					<td th:text="${libro.genero}"></td>
-					<td th:text="${libro.stock}"></td>
-					<td>
-					<a th:href="@{/editar/}+${libro.isbn}"  class="btn btn-warning">Editar</a>
-					<a th:onclick="eliminar([[${libro.isbn}]])" class="btn btn-danger">Eliminar</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+			<table class="table" >
+				<thead>
+					<tr>
+						<th>ISBN</th>
+						<th>TITULO</th>
+						<th>AUTOR</th>
+						<th>EDICION</th>
+						<th>GENERO</th>
+						<th>STOCK</th>
+						<th>ACCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="libro:${libros}">
+						<td th:text="${libro.isbn}"></td>
+						<td th:text="${libro.titulo}"></td>
+						<td th:text="${libro.autor}"></td>
+						<td th:text="${libro.edicion}"></td>
+						<td th:text="${libro.genero}"></td>
+						<td th:text="${libro.stock}"></td>
+						<td>
+						<a th:href="@{/editar/}+${libro.isbn}"  class="btn btn-warning">Editar</a>
+						<a th:onclick="eliminar([[${libro.isbn}]])" class="btn btn-danger">Eliminar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<nav aria-label="Pagination">
+						<ul class="pagination justify-content-center">
+							<li class="page-item" th:each="page : ${pages}">
+								<a class="page-link" th:href="@{|/?page=${page}|}" th:text="${page}"></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
