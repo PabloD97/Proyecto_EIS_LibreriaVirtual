@@ -16,7 +16,11 @@ Donde habrá un administrador que podrá hacer todo lo descrito anteriormente y 
 ### Lenguaje :
 
 - Java : Para crear el modelo del dominio
+
+- JavaScript : Para las funcionalidades de la pagina web
+
 - HTML : Estructura de la aplicacion
+
 - CSS : Para darle estilo a la estructura html de la aplicacion
 
 
