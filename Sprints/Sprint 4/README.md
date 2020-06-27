@@ -8,7 +8,7 @@ para poder  no tener que estar scroleando
 
 - **Prioridad:** Normal
 - **Estimado:** 8
-- **Estado:** En Proceso
+- **Estado:** Finalizado
 
 ## 10- Spike login 
  
@@ -18,7 +18,7 @@ para poder realizar   un login en el siguiente sprint
 
 
 - **Prioridad:** Alta
-- **Estimado:** 5
+- **Estimado:** 13
 - **Estado:** En Proceso
 
 ## 11- Poder documentar la API REST
