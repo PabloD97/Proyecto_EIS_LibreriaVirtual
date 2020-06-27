@@ -1,14 +1,18 @@
 [![Build Status](https://travis-ci.org/PabloD97/Proyecto_EIS_LibreriaVirtual.svg?branch=master)](https://travis-ci.org/PabloD97/Proyecto_EIS_LibreriaVirtual)
 
-## Proyecto : Libreria Virtual
+# Proyecto : Libreria Virtual
 
 ### Integrantes:
+
 - Martin Boglione
+
 - Pablo Diaz
+
 - Ignacio Chelasco
 
 
 ### Descripcion:
+
 El trabajo consiste en desarrollar una aplicacion web de libros, donde se podra visualizar,modificar,eliminar y agregar libros.
 Donde habrá un administrador que podrá hacer todo lo descrito anteriormente y un usuario que solo podrá comprar.
 
