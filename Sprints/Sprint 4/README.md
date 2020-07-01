@@ -32,3 +32,6 @@ para el uso de terceros
 - **Estado:** Finalizado
 
 ## RETROSPECTIVA 01/07/2020 Fin de Sprint 4
+
+Se llego a completar las dos US previstas para este sprint sin problema.
+Tambien se investigo para implementar el loggin en el ultimo sprint.
