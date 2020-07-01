@@ -19,7 +19,7 @@ para poder realizar   un login en el siguiente sprint
 
 - **Prioridad:** Alta
 - **Estimado:** 13
-- **Estado:** En Proceso
+- **Estado:** Finalizado
 
 ## 11- Poder documentar la API REST
 
