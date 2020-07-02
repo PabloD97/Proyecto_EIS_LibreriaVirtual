@@ -25,3 +25,5 @@ Como administrador quiero poder vincular una imagen a un libro para poder vizual
 - **Prioridad:** Media
 - **Estimado:** 8
 - **Estado:** Finalizado
+
+## RETROSPECTIVA 08/07/2020 Fin de Sprint 5
