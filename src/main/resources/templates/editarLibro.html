@@ -9,7 +9,7 @@
 <body>
 	<div class ="container mt-4">
 		<div class = "col-sm-6">
-			<form class="formulario" th:action="@{/save}" th:object=${libro} method="POST">
+			<form class="formulario" th:action="@{/save}" th:object=${libro} method="POST" enctype="multipart/form-data">
 				<div class="card">
 					<div class="card-header">
 					<h2>Editar Libro</h2>
@@ -38,7 +38,10 @@
 						<div class="form-group">
 							<label>STOCK</label>
 							<input th:field="*{stock}" type="text" class="form-control"/>
-						</div>					
+						</div>		
+						<div class="row form-group">
+							<input type="file" name="file" class="m-2"/>
+						</div>				
 					</div>
 					<div class="card-footer">
 						<input type="submit" value="Guardar" class="btn btn-success">

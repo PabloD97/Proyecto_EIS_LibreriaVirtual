@@ -27,34 +27,33 @@
 	<h2 th:if="${libros.isEmpty()}" class = "titulo">No hay libros</h2>	
 	<div th:if="${!libros.isEmpty()}" class="panel-heading">
 		<h1 class = "titulo">Libros</h1>
-			<div class="container mt-5">
+			<div class="card-columns">
 				<div th:each="libro : ${libros}">
-					<div class="row justify-content-center">
-						<div class="card m-1 p-1" style="width:45%;">
-							<div class="row">
-								<div class="col-md-7">
-								<img class="float-left ml-1" th:src="@{'/uploads/'+${libro.foto}}"
-								th:alt="${libro.foto}" style="max_width:90%;max-heigth:100%;" />
-								</div>
+					
+						
+							<div class="card m-1 p-1">
 								
-								<div class="col-md-5 mt-3">
-									<h6 th:text="${libro.isbn}"></h6>
-									<h3 th:text="${libro.titulo}"></h3>
-									<h7 th:text="${libro.autor}"></h7>
+								<img class="imagen" th:src="@{'/uploads/'+${libro.foto}}"
+								th:alt="${libro.foto}"/>
+								
+								
+									<p>
+									<h6 th:text="${libro.isbn}"></h6></p>
+									<h4 class="textos" th:text="${libro.titulo}"></h4></p>
+									<h4 th:text="${libro.autor}"></h4></p>
 									
-									<div class="mt-3">
-										<h10 th:text="${libro.genero}"></h10></p>
-										<h10 th:text="${libro.edicion}"></h10></p>
-										<h10 th:text="${libro.stock}"></h10></p>
+									
+										<h5 th:text="${libro.genero}"></h5></p>
+										Edicion: <h7 th:text="${libro.edicion}"></h7></p>
+										Stock: <h7 th:text="${libro.stock}"></h7></p>
 										<a th:href="@{/editar/}+${libro.isbn}"  class="btn btn-warning">Editar</a>
 										<a th:onclick="eliminar([[${libro.isbn}]])" class="btn btn-danger">Eliminar</a>
-									</div>
+									
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
@@ -68,8 +67,8 @@
 				</div>
 				<div class="col-md-2"></div>
 			</div>
-		</div>
-	</div>
+		
+	
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="funciones.js"></script>

@@ -60,7 +60,7 @@ public class Controlador {
 	public String listar(@RequestParam Map<String, Object> params,Model model, @Param("keyword") String keyword ) {
 		int page = params.get("page") != null ? Integer.valueOf(params.get("page").toString()) - 1 : 0;
 		
-		PageRequest pageRequest = PageRequest.of(page, 5);
+		PageRequest pageRequest = PageRequest.of(page, 6);
 		
 		Page<Libro> pageLibro = service.listarTodos(pageRequest, keyword);
 		
@@ -97,6 +97,7 @@ public class Controlador {
 			}
 			service.save(libro);
 		}
+		service.save(libro);
 		return "redirect:/";
 	}
 	
