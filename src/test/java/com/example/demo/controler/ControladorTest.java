@@ -24,9 +24,9 @@ public class ControladorTest {
 	@Test
 	public void comoAdministradorDeseoVerTodosLosLibros() {
 	    // given
-		Libro libro1 = new Libro(1, "libro1", "libron", 0, "librito", 0);
-		Libro libro2 = new Libro(2, "libro2", "libron", 0, "librito", 0);
-		Libro libro3 = new Libro(3, "libro3", "libron", 0, "librito", 0);
+		Libro libro1 = new Libro(1, "libro1", "libron", 0, "librito", 0,"foto1");
+		Libro libro2 = new Libro(2, "libro2", "libron", 0, "librito", 0,"foto2");
+		Libro libro3 = new Libro(3, "libro3", "libron", 0, "librito", 0,"foto3");
 		  
 	    // when
 		libroService.save(libro1);
@@ -42,7 +42,7 @@ public class ControladorTest {
 	@Test
 	public void comoAdministradorDeseoAgregarUnLibro() {
 	    // given
-		Libro libro1 = new Libro(0, "libro1", "libron", 0, "librito", 0);
+		Libro libro1 = new Libro(0, "libro1", "libron", 0, "librito", 0,"foto1");
 	 
 	    // when
 		libroService.save(libro1);
@@ -56,7 +56,7 @@ public class ControladorTest {
 	@Test
 	public void comoAdministradorDeseoBorrarUnLibroPorSuISBN() {
 		//given
-		Libro libroNew = new Libro(1,"libroPrueba","libroAutor",3,"librazo",4);
+		Libro libroNew = new Libro(1,"libroPrueba","libroAutor",3,"librazo",4,"foto5");
 		
 		//when
 		Libro libroGuardado = libroService.save(libroNew);
@@ -70,7 +70,7 @@ public class ControladorTest {
 	@Test
 	public void comoAdministradorDeseoEditarUnLibro() {
 	    // given
-		Libro libro = new Libro(0, "libro1", "libron", 0, "librito", 0);
+		Libro libro = new Libro(0, "libro1", "libron", 0, "librito", 0,"foto8");
 	 
 	    // when
 		libroService.save(libro);

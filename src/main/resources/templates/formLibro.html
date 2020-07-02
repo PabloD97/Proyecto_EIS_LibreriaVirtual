@@ -3,13 +3,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Agregar Libro</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+
 <link rel="stylesheet" type="text/css" href="../static/css/formLibro.css" th:href="@{../css/formLibro.css}">
 </head>
 <body>
 	<div class ="container mt-4">
 		<div class = "col-sm-6">
-			<form class="formulario" th:action="@{/save}" th:object=${libro} method="POST">
+			<form class="formulario" th:action="@{/save}" th:object=${libro} method="POST" enctype="multipart/form-data">
 				<div class="card">
 					<div class="card-header">
 					<h2>Agregar Libro</h2>
@@ -34,6 +35,9 @@
 						<div class="form-group">
 							<label>STOCK</label>
 							<input th:field="*{stock}" type="text" class="form-control"/>
+						</div>
+						<div class="row form-group">
+							<input type="file" name="file" class="m-2"/>
 						</div>					
 					</div>
 					<div class="card-footer">

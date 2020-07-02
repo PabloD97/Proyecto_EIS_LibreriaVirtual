@@ -1,5 +1,8 @@
 package com.example.demo.controler;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.interfaceService.ILibroService;
 import com.example.demo.modelo.Libro;
@@ -78,8 +82,21 @@ public class Controlador {
 	}
 	
 	@PostMapping("/save")
-	public String guardar(@Valid Libro libro, Model model) {
-		service.save(libro);
+	public String guardar(@RequestParam(name = "file",required = false) MultipartFile foto,Libro libro) {
+		if (!foto.isEmpty()) {
+			String ruta = "C://Temp//uploads";
+			
+			try {
+				byte[] bytes = foto.getBytes();
+				Path rutaAbsoluta = Paths.get(ruta + "//" + foto.getOriginalFilename());
+				Files.write(rutaAbsoluta, bytes);
+				libro.setFoto(foto.getOriginalFilename());
+				
+			}catch (Exception e) {
+				
+			}
+			service.save(libro);
+		}
 		return "redirect:/";
 	}
 	

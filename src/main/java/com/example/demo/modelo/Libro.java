@@ -18,6 +18,7 @@ public class Libro {
 	private int edicion;
 	private String genero;
 	private int stock;
+	private String foto;
 	
 	
 	
@@ -26,7 +27,7 @@ public class Libro {
 	}
 
 
-	public Libro(int isbn, String titulo, String autor, int edicion, String genero, int stock) {
+	public Libro(int isbn, String titulo, String autor, int edicion, String genero, int stock,String foto) {
 		super();
 		this.isbn = isbn;
 		this.titulo = titulo;
@@ -34,6 +35,7 @@ public class Libro {
 		this.edicion = edicion;
 		this.genero = genero;
 		this.stock = stock;
+		this.foto = foto;
 	}
 
 
@@ -108,6 +110,17 @@ public class Libro {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+
+
+	public String getFoto() {
+		return foto;
+	}
+
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
 	
 	
 	
