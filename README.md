@@ -13,8 +13,8 @@
 
 ### Descripcion:
 
-El trabajo consiste en desarrollar una aplicacion web de libros, donde se podra visualizar,modificar,eliminar y agregar libros.
-Donde habrá un administrador que podrá hacer todo lo descrito anteriormente y un usuario que solo podrá comprar.
+El trabajo consistira en desarrollar una aplicacion web de libros, donde se podran visualizar todos los que hayan disponibles, poder buscarlos por un atributo en especifico, editarlos, eliminarlos y agregar nuevos.
+
 
 
 ### Lenguaje :
