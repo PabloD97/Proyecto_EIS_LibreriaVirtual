@@ -4,11 +4,9 @@
 
 ### Integrantes:
 
-- Martin Boglione
-
-- Pablo Diaz
-
-- Ignacio Chelasco
+- BOGLIONE, Martin.
+- CHELASCO, Ignacio.
+- DIAZ, Pablo.
 
 
 ### Descripcion:
