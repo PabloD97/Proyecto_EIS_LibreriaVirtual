@@ -16,7 +16,7 @@ Debemos realizar una presentación en la cual mostramos tanto la evolución que 
 
 - **Prioridad:** Alta
 - **Estimado:** 8
-- **Estado:** En proceso
+- **Estado:** Finalizado
 
 ## 14- Poder vincular imagen a un libro
 
